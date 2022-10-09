@@ -17,12 +17,19 @@ adapter: adapter({
 		})
 ```
 
-By default no prerender, but we won't exclude it for ever
+- By default no prerender, but we won't exclude it for ever
+```
 // src/routes/+layout.js
 export const prerender = false;
+```
 
 - integration Ionic
-npm i @ionic/core 
+- npm i @ionic/core 
+- copy ionic/svelte code into lib
+- add integration in +layout.svelte
+
+And we're stuck!
+
 
 # create-svelte
 
