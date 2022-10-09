@@ -5,6 +5,7 @@
 
 	import { prefetch } from '$app/navigation';
 
+	// this gives error -
 	import { setupIonicSvelte } from '$lib/ionic/svelte';
 
 	//	setupIonicSvelte();

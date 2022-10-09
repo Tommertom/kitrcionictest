@@ -1,5 +1,12 @@
 # Integration steps Kit RC 1.0 and Ionic
 
+Start the project
+```
+npm create svelte@latest my-app
+cd my-app
+npm install
+```
+
 ## make it SPA
 - npm i -D @sveltejs/adapter-static
 - import adapter from '@sveltejs/adapter-static' in svelte.config.js
