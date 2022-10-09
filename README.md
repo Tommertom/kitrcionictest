@@ -1,11 +1,12 @@
 # Integration steps Kit RC 1.0 and Ionic
 
-- make it SPA
-npm i -D @sveltejs/adapter-static
-import adapter from '@sveltejs/adapter-static' in svelte.config.js
-npm remove @sveltejs/adapter-auto
+## make it SPA
+- npm i -D @sveltejs/adapter-static
+- import adapter from '@sveltejs/adapter-static' in svelte.config.js
+- npm remove @sveltejs/adapter-auto
 
-Configure adapter static: https://github.com/sveltejs/kit/tree/master/packages/adapter-static
+- Configure adapter static: https://github.com/sveltejs/kit/tree/master/packages/adapter-static
+```
 adapter: adapter({
 			// default options are shown. On some platforms
 			// these options are set automatically — see below
@@ -14,6 +15,7 @@ adapter: adapter({
 			fallback: '200.html', // I wonder if this is necessary if your rewrite rules are set accordingly in hosting
 			precompress: false
 		})
+```
 
 By default no prerender, but we won't exclude it for ever
 // src/routes/+layout.js
