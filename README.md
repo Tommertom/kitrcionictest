@@ -27,7 +27,7 @@ adapter: adapter({
 - By default no prerender, but we won't exclude it for ever
 ```
 // src/routes/+layout.js
-export const prerender = false;
+export const ssr = false;
 ```
 
 - integration Ionic
