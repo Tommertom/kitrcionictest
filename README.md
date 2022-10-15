@@ -24,7 +24,7 @@ adapter: adapter({
 		})
 ```
 
-- By default no prerender, but we won't exclude it for ever
+- By default no ssr
 ```
 // src/routes/+layout.js
 export const ssr = false;
