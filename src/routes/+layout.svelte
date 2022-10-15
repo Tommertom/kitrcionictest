@@ -7,18 +7,14 @@
 	import { prefetch } from '$app/navigation';
 
 	// this gives error -
-	// import { setupIonicSvelte } from '$lib/ionic/svelte';
+	import { setupIonicSvelte } from '$lib/ionic/svelte';
 
 	//	setupIonicSvelte();
 
 	// Prevent FOUC by blocking rendering until ionic is loaded
-	let ionicLoaded = false;
+	const ionicLoaded = true;
 
-	onMount(async () => {
-		const { setupIonicSvelte } = await import('$lib/ionic/svelte');
-		setupIonicSvelte();
-		ionicLoaded = true;
-	});
+	setupIonicSvelte();
 
 	/* Theme variables */
 	import '../theme/variables.css';
@@ -40,12 +36,10 @@
     */
 </script>
 
-{#if ionicLoaded}
-	<ion-app>
-		<ion-split-pane content-id="main">
-			<div class="ion-page" id="main">
-				<slot />
-			</div>
-		</ion-split-pane>
-	</ion-app>
-{/if}
+<ion-app>
+	<ion-split-pane content-id="main">
+		<div class="ion-page" id="main">
+			<slot />
+		</div>
+	</ion-split-pane>
+</ion-app>

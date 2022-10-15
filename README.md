@@ -33,10 +33,10 @@ export const prerender = false;
 - integration Ionic
 - npm i @ionic/core 
 - copy ionic/svelte code into lib
-- add integration in +layout.svelte
-
-And we're stuck!
-
+- add integration in +layout.svelte, putting the import in onMount
+- run npx svelte-migrate routes
+- modifications needed in various imports (lib)
+- IonPage routify change to pagehook in svelte
 
 # create-svelte
 

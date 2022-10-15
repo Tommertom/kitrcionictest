@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@ionic/core": "^6.3.0"
+		"@ionic/core": "^6.3.0",
+		"localforage": "^1.10.0"
 	}
 }
