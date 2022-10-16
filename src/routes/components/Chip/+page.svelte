@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { pin, wine, checkmarkCircle, closeCircle, restaurant, videocam } from 'ionicons/icons';
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 </script>
 
 <svelte:head>

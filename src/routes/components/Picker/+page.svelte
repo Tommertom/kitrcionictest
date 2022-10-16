@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { pickerController } from '$lib/ionic/svelte';
+	import { pickerController } from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const showPicker = async () => {
 		const defaultColumnOptions = [['Dog', 'Cat', 'Bird', 'Lizard', 'Chinchilla']];

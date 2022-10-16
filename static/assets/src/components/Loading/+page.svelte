@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { loadingController } from '$lib/ionic/svelte';
+	import { loadingController } from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const showLoading = async () => {
 		const options = {

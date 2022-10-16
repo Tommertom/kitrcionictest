@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { logoIonic, star, fingerPrint, ellipsisVertical } from 'ionicons/icons';
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const clickAction = (event) => {
 		console.log('You clicked me!!', event.detail);

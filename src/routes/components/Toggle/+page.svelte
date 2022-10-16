@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const toggleAction = (event) => {
 		console.log('Toggle action', event.detail, event.srcElement.name);

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { modalController, toastController } from '$lib/ionic/svelte';
+	import { modalController, toastController } from '$ionic/svelte';
 	import { close } from 'ionicons/icons';
 	import localForage from 'localforage';
 

@@ -2,8 +2,8 @@
 	import * as allIonicIcons from 'ionicons/icons';
 	import SourceButton from '$lib/components/SourceButton.svelte';
 
-	import { toastController } from '$lib/ionic/svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import { toastController } from '$ionic/svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let icons = Object.keys(allIonicIcons);
 	let list = [];

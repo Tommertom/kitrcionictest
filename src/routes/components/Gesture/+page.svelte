@@ -2,7 +2,7 @@
 	import { createAnimation, createGesture } from '@ionic/core';
 	import { onMount } from 'svelte';
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let animation;
 	let gesture;

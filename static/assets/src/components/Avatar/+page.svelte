@@ -1,6 +1,6 @@
 <script>
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const ionViewDidEnter = () => {
 		console.log('Avatar:ionViewDidEnter');

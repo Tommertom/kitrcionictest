@@ -1,11 +1,16 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import { menuController, modalController, registerMenu } from '$lib/ionic/svelte';
-	import * as allIonicIcons from 'ionicons/icons';
-	//	import { pwaBeforeInstallPrompt, canInstall } from '$lib/pwa';
 	import { onMount } from 'svelte';
-	import IOSInstall from '$lib/components/IOSInstall.svelte';
+	import { goto } from '$app/navigation';
+	import { dev } from '$app/environment';
+	import { prefetch, prefetchRoutes } from '$app/navigation';
+
+	import { pwaBeforeInstallPrompt, canInstall } from '$lib/services/pwa';
+
+	import { menuController, modalController, registerMenu } from '$ionic/svelte';
 	import { isPlatform } from '@ionic/core';
+	import * as allIonicIcons from 'ionicons/icons';
+
+	import IOSInstall from '$lib/components/IOSInstall.svelte';
 
 	let hideMenu = true; // a hack because the menu shows before the splash (in Chrome on Windows)
 
@@ -29,10 +34,6 @@
 	onMount(() => {
 		registerMenu('mainmenu');
 	});
-
-	function capitalizeFirstLetter(text: string) {
-		return text.charAt(0).toUpperCase() + text.slice(1);
-	}
 
 	const componentList = [
 		'Accordion',
@@ -86,7 +87,8 @@
 		'Toast',
 		'Toggle',
 		'Toolbar'
-	];
+	].sort();
+
 	let menuItems: Array<{ url: string; label: string; icon: any }> = componentList.map(
 		(componentName) => {
 			const url =
@@ -98,32 +100,18 @@
 			};
 		}
 	);
-	/*
-	.traverse('/components')
-		.children.map((route) => {
-			let url = route.path;
 
-			const label = capitalizeFirstLetter(route.name);
-			if (label === 'Tabs') url = '/components/tabs/[tab]';
-
-			return {
-				url,
-				label,
-				icon: allIonicIcons['home']
-			};
-		});
-*/
 	// Randomize the icons
 	const icons = Object.keys(allIonicIcons);
 	menuItems.map((menuItem) => {
 		const iconForMenu = icons[Math.floor(Math.random() * icons.length)];
+		// @ts-ignore
 		menuItem.icon = allIonicIcons[iconForMenu];
 	});
 	menuItems = [...menuItems];
 
-	const closeAndNavigate = async (url) => {
+	const closeAndNavigate = async (url: string) => {
 		console.log('Navigate url', url);
-		console.log('Test', url);
 		goto(url);
 
 		menuController.close('mainmenu');
@@ -151,6 +139,19 @@
 
 		await modal.present();
 	};
+
+	// Aggressive prefetching for faster rendering
+	if (!dev) {
+		prefetchRoutes();
+		componentList.forEach((componentName, i) => {
+			const url =
+				componentName !== 'Tabs' ? `/components/${componentName}` : `/components/tabs/explain`;
+			setTimeout(() => {
+				//	console.log('Prefetching', url);
+				//		prefetch(url);
+			}, 150 * (i + 1));
+		});
+	}
 </script>
 
 <ion-menu {side} content-id="main" menu-id="mainmenu" class:menuhide={hideMenu}>
@@ -176,6 +177,18 @@
 				<ion-item />
 				{#if iosInstall}
 					<ion-item on:click={showIOSinstall}>
+						<ion-icon icon={allIonicIcons['download']} slot="start" />
+						<ion-label>Install this app as PWA</ion-label>
+					</ion-item>
+					<ion-item />
+				{/if}
+				{#if $canInstall}
+					<ion-item
+						on:click={() => {
+							const prompt = $pwaBeforeInstallPrompt;
+							prompt.prompt();
+						}}
+					>
 						<ion-icon icon={allIonicIcons['download']} slot="start" />
 						<ion-label>Install this app as PWA</ion-label>
 					</ion-item>

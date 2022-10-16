@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { repeat } from 'ionicons/icons';
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	// code taken from https://petercoding.com/ionic/2019/05/06/implementing-reorder-in-ionic4/
 	let reorderGroup;

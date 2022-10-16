@@ -8,7 +8,7 @@
 		logoGoogle,
 		share
 	} from 'ionicons/icons';
-	import { modalController } from '$lib/ionic/svelte';
+	import { modalController } from '$ionic/svelte';
 	import SourceViewer from '$lib/components/SourceViewer.svelte';
 
 	export let name: string;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NavHome from '$lib/components/NavHome.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 	import { onMount, SvelteComponent } from 'svelte';
 
 	let ionNav: HTMLIonNavElement;

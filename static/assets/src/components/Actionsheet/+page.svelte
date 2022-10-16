@@ -9,10 +9,10 @@
 		pickerController,
 		actionSheetController,
 		popoverController
-	} from '$lib/ionic/svelte';
+	} from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const showActionSheet = async () => {
 		const options = {

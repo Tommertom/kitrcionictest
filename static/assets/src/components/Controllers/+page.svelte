@@ -9,12 +9,12 @@
 		pickerController,
 		actionSheetController,
 		popoverController
-	} from '$lib/ionic/svelte';
+	} from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
 
 	import Music from '$lib/components/Music.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let inlineModalOpen = false;
 	let breakpoints = [0, 0.5, 1];

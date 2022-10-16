@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	import { createAnimation } from '@ionic/core';
 	import { onMount } from 'svelte';

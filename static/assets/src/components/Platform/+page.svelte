@@ -16,8 +16,8 @@
 		prefersDark,
 		keydown,
 		resize
-	} from '$lib/ionic/svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	} from '$ionic/svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let platforms: string[] = getPlatforms();
 

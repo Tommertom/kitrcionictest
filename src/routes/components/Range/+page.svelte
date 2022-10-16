@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { sunny, brush, thermometer, contrast } from 'ionicons/icons';
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let dualRange;
 

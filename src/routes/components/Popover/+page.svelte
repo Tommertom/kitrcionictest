@@ -1,9 +1,9 @@
 <script lang="ts">
 	import PopoverExtra from '$lib/components/PopoverExtra.svelte';
-	import { popoverController } from '$lib/ionic/svelte';
+	import { popoverController } from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const showPopover = async (event) => {
 		const popover = await popoverController.create({

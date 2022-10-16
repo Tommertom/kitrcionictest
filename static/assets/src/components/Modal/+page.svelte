@@ -1,12 +1,12 @@
 <script lang="ts">
 	import ModalExtra from '$lib/components/ModalExtra.svelte';
 
-	import { modalController } from '$lib/ionic/svelte';
+	import { modalController } from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
 
 	import Music from '$lib/components/Music.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let inlineModalOpen = false;
 	let breakpoints = [0, 0.5, 1];

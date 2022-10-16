@@ -3,7 +3,7 @@
 	import { users } from '$lib/services/users';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let length = 0;
 	let infiniteScroll: HTMLIonInfiniteScrollElement;

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import IonTab from '$lib/ionic/svelte/components/IonTabs.svelte';
+	import IonTab from '$ionic/svelte/components/IonTabs.svelte';
 
 	import Controllers from '../../Controllers/+page.svelte';
 	import Music from '$lib/components/Music.svelte';
 	import TabsExplain from '$lib/components/TabsExplain.svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	import type { PageData } from './$types';
+	export let data: PageData;
 
 	console.log('Receiving slug data in [tab]', data);
 	const tab = data.tab;

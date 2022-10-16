@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IonTab from '$lib/ionic/svelte/components/IonTabs.svelte';
+	import IonTab from '$ionic/svelte/components/IonTabs.svelte';
 
 	import Controllers from '../../Controllers/+page.svelte';
 	import Music from '$lib/components/Music.svelte';

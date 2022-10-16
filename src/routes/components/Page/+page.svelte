@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 	import SourceButton from '$lib/components/SourceButton.svelte';
 
 	const ionViewWillEnter = () => {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { modalController } from '$lib/ionic/svelte';
+	import { modalController } from '$ionic/svelte';
 
 	export let firstName = undefined;
 	export let lastName = undefined;

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { toastController } from '$lib/ionic/svelte';
+	import { toastController } from '$ionic/svelte';
 
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const showToast = async () => {
 		const toast = await toastController.create({

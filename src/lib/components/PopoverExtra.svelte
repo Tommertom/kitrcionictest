@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { popoverController } from '$lib/ionic/svelte';
+	import { popoverController } from '$ionic/svelte';
 
 	export let firstName = undefined;
 	export let lastName = undefined;

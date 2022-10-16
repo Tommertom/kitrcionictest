@@ -3,7 +3,7 @@
 	import SourceButton from '$lib/components/SourceButton.svelte';
 
 	import { onMount } from 'svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	let expandBreadcrumb;
 	let popoverBreadcrumb;

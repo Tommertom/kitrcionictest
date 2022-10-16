@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { pin, heart, call, logoIonic, logoTwitter, logoFacebook } from 'ionicons/icons';
 	import SourceButton from '$lib/components/SourceButton.svelte';
-	import IonPage from '$lib/ionic/svelte/components/IonPage.svelte';
+	import IonPage from '$ionic/svelte/components/IonPage.svelte';
 
 	const segmentChange = console.log;
 	const segmentButtonChange = console.log;

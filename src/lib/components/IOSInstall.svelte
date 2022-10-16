@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { alertController, modalController } from '$lib/ionic/svelte';
+	import { alertController, modalController } from '$ionic/svelte';
 
 	const closeModal = async () => {
 		modalController.dismiss();
