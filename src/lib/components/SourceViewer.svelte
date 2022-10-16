@@ -61,7 +61,7 @@
 	if (name == 'tabs') {
 		name = 'tabs/[tab]';
 	}
-	fetch(`/assets/src/components/${name}.svelte`).then((response) => {
+	fetch(`/assets/src/components/${name}/+page.svelte`).then((response) => {
 		response
 			.text()
 			.then((txt) => {

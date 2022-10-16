@@ -2,7 +2,6 @@
 	import { fly } from 'svelte/transition';
 
 	import { onDestroy, onMount } from 'svelte';
-	// import { beforeUrlChange } from "@roxi/routify";
 	import { beforeNavigate } from '$app/navigation';
 
 	export let ionViewWillEnter = () => {};

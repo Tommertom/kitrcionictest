@@ -6,3 +6,11 @@ node_modules
 .env
 .env.*
 !.env.example
+/.firebase
+.firebaserc
+.npmrc
+.prettierignore
+.prettierrc
+.eslintignore
+.eslintrc.cjs
+

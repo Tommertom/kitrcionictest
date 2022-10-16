@@ -35,8 +35,16 @@ export const ssr = false;
 - copy ionic/svelte code into lib
 - add integration in +layout.svelte, putting the import in onMount
 - run npx svelte-migrate routes
-- modifications needed in various imports (lib)
+- modifications needed in various imports (lib path change)
 - IonPage routify change to pagehook in svelte
+- Menu needs to have static list of components - no generated list (todo)
+- Created slug navigation 
+
+- PWA stuff
+- install Vite PWA
+- Copy stuff in index.html
+- 	<link rel="manifest" href="/manifest.webmanifest">
+- Config manifest
 
 # create-svelte
 

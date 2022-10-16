@@ -1,73 +1,73 @@
 <script lang="ts">
-  import * as allIonicIcons from "ionicons/icons";
-  import NavDetail from "./NavDetail.svelte";
-  import SourceButton from "$components/SourceButton.svelte";
-  import { type Tech, techs } from "$services/techs";
-  import type { SvelteComponent } from "svelte";
+	import * as allIonicIcons from 'ionicons/icons';
+	import NavDetail from './NavDetail.svelte';
+	import SourceButton from '$lib/components/SourceButton.svelte';
+	import { type Tech, techs } from '$lib/services/techs';
+	import type { SvelteComponent } from 'svelte';
 
-  export let ionNav: HTMLIonNavElement;
+	export let ionNav: HTMLIonNavElement;
 
-  const createHTMLCompFromSvelte = (
-    component: new (...args: any) => SvelteComponent,
-    componentProps: {}
-  ) => {
-    const divWrapper = document.createElement("div");
-    const contentID = "id" + Date.now();
-    divWrapper.id = contentID;
+	const createHTMLCompFromSvelte = (
+		component: new (...args: any) => SvelteComponent,
+		componentProps: {}
+	) => {
+		const divWrapper = document.createElement('div');
+		const contentID = 'id' + Date.now();
+		divWrapper.id = contentID;
 
-    let navContent = document.createElement("div");
+		let navContent = document.createElement('div');
 
-    divWrapper.appendChild(navContent);
-    document.body.appendChild(divWrapper);
+		divWrapper.appendChild(navContent);
+		document.body.appendChild(divWrapper);
 
-    const props = {
-      ...componentProps,
-      ionNav,
-    };
+		const props = {
+			...componentProps,
+			ionNav
+		};
 
-    const svelteComponent = new component({
-      target: navContent,
-      props,
-    });
+		const svelteComponent = new component({
+			target: navContent,
+			props
+		});
 
-    return divWrapper;
-  };
+		return divWrapper;
+	};
 
-  const showDetail = (tech: Tech) => {
-    ionNav.push(createHTMLCompFromSvelte(NavDetail, { tech }));
-  };
+	const showDetail = (tech: Tech) => {
+		ionNav.push(createHTMLCompFromSvelte(NavDetail, { tech }));
+	};
 </script>
 
 <svelte:head>
-  <title>Ionic Companion - Nav</title>
+	<title>Ionic Companion - Nav</title>
 </svelte:head>
 
 <ion-header translucent="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button />
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <SourceButton name="Nav" />
-    </ion-buttons>
-    <ion-title>Nav element</ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button />
+		</ion-buttons>
+		<ion-buttons slot="end">
+			<SourceButton name="Nav" />
+		</ion-buttons>
+		<ion-title>Nav element</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
-  <ion-list>
-    {#each techs as tech}
-      <ion-item
-        button
-        on:click={() => {
-          showDetail(tech);
-        }}
-      >
-        <ion-icon icon={allIonicIcons[tech.icon]} style="color: {tech.color};" />
-        <ion-label>
-          <h3>{tech.title}</h3>
-        </ion-label>
-      </ion-item>
-    {/each}
-  </ion-list>
+	<ion-list>
+		{#each techs as tech}
+			<ion-item
+				button
+				on:click={() => {
+					showDetail(tech);
+				}}
+			>
+				<ion-icon icon={allIonicIcons[tech.icon]} style="color: {tech.color};" />
+				<ion-label>
+					<h3>{tech.title}</h3>
+				</ion-label>
+			</ion-item>
+		{/each}
+	</ion-list>
 </ion-content>
